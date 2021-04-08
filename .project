@@ -28,3 +28,11 @@ public void testAddBcc() throws Exception{
 		
 		assertEquals(3, email.getBccAddresses().size());
 	}
+
+public void testgetHostName() {
+		email.setHostName("192.127.0.1");
+		
+		String hostname=email.getHostName();
+		
+		assertEquals("192.127.0.1", hostname);
+	}
