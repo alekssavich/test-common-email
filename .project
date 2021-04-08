@@ -36,3 +36,8 @@ public void testgetHostName() {
 		
 		assertEquals("192.127.0.1", hostname);
 	}
+
+public void testGetSetHostNameWithNUll() {
+		email.setHostName(null);
+		assertEquals(null, email.getHostName());
+	}
