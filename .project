@@ -41,3 +41,17 @@ public void testGetSetHostNameWithNUll() {
 		email.setHostName(null);
 		assertEquals(null, email.getHostName());
 	}
+
+public void testbuildMimeMessage() throws EmailException {
+		email.setHostName("localhost");
+		email.setSmtpPort(1234);
+		email.setFrom("a@b.com");
+		email.addTo("c@d.com");
+		email.setSubject("test mail");
+		
+		email.setCharset("ISO-8859-1");
+		email.setContent("test content", "text/plain");
+		email.addCc("test@abc.com");
+		email.addBcc("test2@abc.com");
+		email.buildMimeMessage();
+	}
